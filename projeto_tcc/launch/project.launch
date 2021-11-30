@@ -1,0 +1,8 @@
+<launch>
+	<node name="sonar_publisher" pkg="projeto_tcc" type="sonar_publisher.py" output="screen">
+	</node>
+	<node name="arduino" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyUSB0" output="screen" respawn="true">
+	</node>
+	<node name="sensors_subscriber" pkg="projeto_tcc" type="sensors_subscriber.py" output="screen">
+	</node>
+</launch>
